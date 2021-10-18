@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Legacy</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+        }
+
+        header{
+            background-color: black;
+            background-image: url(IMG-20210823-WA0054-removebg-preview.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 10%;
+            padding: 10px;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .btn-abrir{
+            color: white;
+            font-size: 25px;
+        }
+
+        nav{
+            height: 100%;
+            width: 0px;
+            background-color: rgb(25, 25, 25);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+            transition: width 0.3s;
+        }
+
+        nav a{
+            color: white;
+            font-size: 25px;
+            display: block;
+            padding: 12px 10px 12px 32px;
+        }
+
+        nav a:hover{
+            color: rgb(25, 25, 25);
+            background-color: white;
+        }
+        main{
+            transition: margin-left 0.5s;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="btn-abrir" onclick="abrirMenu()">&#9776; Abrir</a>
+        <h1 style="color: white; display: inline; text-align: center; margin-left: 47%;">Team Legacy</h1>
+    </header>
+    <nav id="menu">
+        <a href="#" onclick="fecharMenu()">&times;Fechar</a>
+        <a href="players.html">Jogadores</a>
+        <a href="parceiros.html">Parceiros</a>
+        <a href="about.html">Sobre</a>
+    </nav>
+    <main id="conteudo">
+        <img src="TL-removebg-preview.png" alt="Team Legacy" style="margin: -1% -1% -1% -13%;">
+        <h2>Começa aqui um novo legado!</h2>
+    </main>
+    <script>
+        function abrirMenu() {
+            document.getElementById('menu').style.width = '250px';
+            document.getElementById('conteudo').style.marginLeft = '250px';
+        }
+        function fecharMenu() {
+            document.getElementById('menu').style.width = '0px';
+            document.getElementById('conteudo').style.marginLeft = '0px';
+        }
+    </script>
+</body>
+</html>
